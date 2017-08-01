@@ -1,5 +1,6 @@
 
 
+
 //1ST METHOD
 function uniteUnique(arr) {
   var args = Array.prototype.slice.call(arguments);
@@ -31,6 +32,22 @@ function uniteUnique(arr) {
     	return arr1.indexOf(item) < 0;
     }));
   });
+
+}
+
+console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
+
+//3rd METHOD
+function uniteUnique(arr) {
+  var args = Array.prototype.slice.call(arguments);
+  
+ return args.reduce((a,b)=>
+  {
+  	return a.concat(b);
+  }).filter((el,ind,arr)=>{
+ 	return arr.indexOf(el) == ind;
+ });
+
 
 }
 
