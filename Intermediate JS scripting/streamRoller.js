@@ -28,3 +28,23 @@ function steamrollArray(arr) {
 }
 
 steamrollArray([1, [2], [3, [[4]]]]);
+
+
+//METHOD 3
+
+function steamrollArray(arr) {
+  for(var i =0;i< arr.length;i++)
+  {
+  	if(!Array.isArray(arr[i]))
+  	{
+  		arr.concat(arr[i]);
+  	}
+  	else
+  	{
+  		steamrollArray(arr[i])
+  	}
+  }
+ return arr;
+}
+
+steamrollArray([1, [2], [3, [[4]]]]);
