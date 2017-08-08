@@ -37,7 +37,7 @@ function diffArray(arr1, arr2) {
   var newArr = arr1.concat(arr2); 
 
   return newArr.filter((num) => {
-    return (arr1.indexOf(num) === -1 || arr2.indexOf(num) === -1) 
+    return (arr1.indexOf(num) === -1 || arr2.indexOf(num) === -1);
   }); 
 }
 
