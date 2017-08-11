@@ -29,6 +29,7 @@ function checkCashRegister(price, cash, cid) {
     {
       return "closed";
     }
+     
 }
 
 
