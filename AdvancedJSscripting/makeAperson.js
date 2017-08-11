@@ -45,3 +45,42 @@ Object.defineProperty(bob,'last', {
   enumerable:false,
   
 });
+
+//METHOD 2
+
+
+var Person = function(firstAndLast) {
+    // Complete the method below and implement the others similarly
+ var first= firstAndLast.split(' ')[0];
+   var last= firstAndLast.split(' ')[1];
+  
+
+  
+  this.getFirstName = function(){
+    return first;
+};
+  
+    this.getLastName = function(){
+    return last;
+};
+        this.getFullName = function(){
+    return first + " "+ last ;
+};
+  
+ this.setFirstName = function(firstn){
+    first = firstn;
+};
+  
+   this.setLastName = function(lastn){
+    last = lastn;
+};
+
+     this.setFullName = function(fullname){
+ first= fullname.split(' ')[0];
+   last= fullname.split(' ')[1];
+       return  first + " "+ last ;
+     };
+  
+};
+var bob = new Person('Bob Ross');
+bob.getFullName();
